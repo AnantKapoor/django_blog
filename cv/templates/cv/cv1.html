@@ -1,0 +1,76 @@
+
+<html>
+
+    <head>
+        <title>CV</title>
+    </head>
+
+    <body>
+        <div>
+            <h1><a href="/cv">Anant Kapoor CV</a></h1>
+        </div>
+
+        <div>
+            <h2>About</h2>
+            <p>123 University road, Selly Oak, Birmingham</p>
+            <p>+44 7890 123 456</p>
+            <p>anant.kapoor@outlook.com</p>
+        </div>
+
+        <div>
+            <h2>Education</h2>
+            {% for education in education %}
+            <div>
+                <h4>{{ education.title }}</h4>
+                <p>Grade: {{ education.grades}}</p>
+                <p>{{education.description}}</p>
+                <p> Graduation Date: {{education.graduation_date}}</p>
+
+    
+            </div>
+            {% endfor %}
+        </div>
+
+        <div>
+            <h2>Experience</h2>
+            {% for experience in experience %}
+            <div>
+                <h4>{{experience.title }}</h4>
+                <p>{{ experience.position}}</p>
+                <p>{{experience.text}}</p>
+                <p>Start date: {{experience.start_date}}</p>
+                <p>End date: {{experience.end_date}}</p>
+    
+            </div>
+            {% endfor %}
+        </div>
+
+        <div>
+            <h2>Skills</h2>
+            {% for skill in skills %}
+            <div>
+                <h4>{{ skill.title }}</h4>
+                <p>{{ skill.description}}</p>
+                
+            </div>
+            {% endfor %}
+        </div>
+
+        <div>
+            <h2>Interests</h2>
+            {% for interest in interests %}
+            <div>
+                <p>{{ interest.title }}</p>
+                
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+
+
+
+    </body>
+
+</html>
